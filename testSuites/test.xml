@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite1" >   <!---Parallel Testing  <!-parallel="tests"-->
+
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"/>
+    </listeners>
+
+    <test name="ChromeTest1">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <!--class name="testCases.TC__001_LoginTest"/-->
+            <class name="testCases.TC__002_LoginTestDDT"/>
+        </classes>
+    </test>
+
+    <!--
+    <test name="EdgeTest1">
+        <parameter name="browser" value="Edge"/>   -Testing with Edge browser
+        <classes>
+            <class name="testCases.TC__001_LoginTest"/>
+        </classes>
+    </test> -->
+</suite>
